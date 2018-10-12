@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+// Create Schema
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
-    re: 'users'
+    ref: 'users'
   },
   handle: {
     type: String,
@@ -34,7 +35,7 @@ const ProfileSchema = new Schema({
   githubusername: {
     type: String
   },
-  exprience: [
+  experience: [
     {
       title: {
         type: String,
